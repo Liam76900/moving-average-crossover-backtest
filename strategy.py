@@ -9,3 +9,10 @@ def create_signals(data):
     short_ma=data["Close"].rolling(10).mean()
 
     long_ma=data["Close"].rolling(50).mean()
+
+    data["Signal"] = 0
+    data.loc[short_ma > long_ma, "Signal"] = 1
+
+    data["Signal"]=data["Signal"].shift(1)
+
+    return data
