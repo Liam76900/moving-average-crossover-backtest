@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 from dataloader import load_data
 from strategy import create_signals
 from backtest import backtesting
@@ -7,6 +8,9 @@ windows=[(5,20),(10,50),(20,100)]
 symbols=["AAPL","MSFT","GOOGL"]
 
 for short_window,long_window in windows:
+
+    plt.figure()
+
     for symbol in symbols:
 
         data=load_data(symbol)
@@ -22,3 +26,9 @@ for short_window,long_window in windows:
         print(annualised_volatility)
         print("Max Drawdown:")
         print(max_drawdown)
+        plt.plot(data["Cumulative_Strategy"], label=symbol)
+    plt.legend()
+    plt.xlabel("Time")
+    plt.ylabel("Returns")
+    plt.title("Strategy Returns Over Assets")
+    plt.show()
