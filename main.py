@@ -32,3 +32,19 @@ for short_window,long_window in windows:
     plt.ylabel("Returns")
     plt.title("Strategy Returns Over Assets")
     plt.show()
+
+    plt.figure()
+    
+    for symbol in symbols:
+
+        data=load_data(symbol)
+        data=create_signals(data, short_window, long_window)
+        data=backtesting(data)
+        sharpe_ratio, annualised_volatility, max_drawdown=calculate_metrics(data)
+        
+        plt.plot(data["Drawdown"], label=symbol)
+    plt.title("Drawdown Over Time")
+    plt.legend()
+    plt.xlabel("Time")
+    plt.ylabel("Drawdown")
+    plt.show()
