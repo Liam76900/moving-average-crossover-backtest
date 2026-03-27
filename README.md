@@ -28,3 +28,17 @@ The Buy and Hold strategy makes the assumption that the investor buys at the sta
 The risk metrics taken into account are the sharpe ratio, annualised volatility and maximum drawdown. Sharpe ratio measures risk-adjusted returns to perceive whether the returns made are in fact as valuable as the risk taken. Annualised volatility represents how variable the stock prices are with higher percentages indicating greater risk, and lower percentages, more stability. Max drawdowns takes into account the greatest peak-to-trough decline in stock value, demonstrating the worst potential outcome of an investment.
 
 The strategy is also tested against a selection of different short-term and long-term windows of [5, 10, 20] and [20, 50, 100] days respectively. This, therefore, allows us to analyse the sensitivity of the strategy to the parameter choices made.
+
+#Results
+
+| Asset | MA Windows | Strategy Return (%) | Market Return (%) | Annualised Volatility (%) | Sharpe | Max Drawdown (%) |
+|-------|------------|---------------------|-------------------|---------------------------|--------|------------------|
+| AAPL  | 5  / 20    |      21.24          |       54.80       |         16.29             | 1.278  |     -14.32       |
+| MSFT  | 5  / 20    |      22.25          |       58.35       |         19.59             | 1.135  |     -12.54       |
+| GOOGL | 5  / 20    |      01.10          |       56.74       |         24.78             | 0.169  |     -16.11       |
+| AAPL  | 10 / 50    |      17.50          |       54.80       |         13.13             | 1.309  |     -12.29       |
+| MSFT  | 10 / 50    |      35.29          |       58.35       |         19.61             | 1.657  |     -13.59       |
+| GOOGL | 10 / 50    |      14.32          |       56.74       |         23.52             | 0.693  |     -19.27       |
+| AAPL  | 20 / 100   |      09.31          |       54.80       |         10.66             | 0.899  |     -11.31       |
+| MSFT  | 20 / 100   |      04.50          |       58.35       |         14.74             | 0.376  |     -12.99       |
+| GOOGL | 20 / 100   |      13.33          |       56.74       |         20.55             | 0.720  |     -13.08       |
