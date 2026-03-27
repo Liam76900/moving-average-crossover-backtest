@@ -42,4 +42,3 @@ The strategy is also tested against a selection of different short-term and long
 | AAPL  | 20 / 100   |      09.31          |       54.80       |         10.66             | 0.899  |     -11.31       |
 | MSFT  | 20 / 100   |      04.50          |       58.35       |         14.74             | 0.376  |     -12.99       |
 | GOOGL | 20 / 100   |      13.33          |       56.74       |         20.55             | 0.720  |     -13.08       |
-a
