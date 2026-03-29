@@ -4,13 +4,14 @@ Multi-Asset Backtesting of a Moving Average Crossover Strategy
 
 #Overview
 
-This project acts as a simulation of a moving average crossover trading strategy against a buy and hold strategy with mutiple different assets. It also simulatneously incorporates different parameter choices (moving average windows) which help to interpret how these conditions affect risk and returns.
+This project acts as a simulation of a moving average crossover trading strategy against a buy and hold strategy with mutiple different assets. It also simulatneously incorporates different parameter choices (moving average windows) which help to interpret how these conditions affect risk and returns as well as having transaction costs for when a trade is made to increase the precision of my returns.
 
 #Features
 
 -Multi-asset backtesting
 -Many risk metrics including Sharpe Ratio, Maximum Drawdown and Annualised Volatility
 -A set of parameter choices(window combinations)
+-Transaction costs
 -Moving Average Crossover Strategy
 -Comparative data against a buy and hold strategy
 -Graphical visualisations of Cumulative Returns and Drawdowns
@@ -69,3 +70,25 @@ day window against time
 <p align="center">
   <img src=".\images\ten-fifty-d.png" alt="Moving Average" width="600"/>
 </p>
+
+#Analysis of Results
+
+-Risk-adjusted performance and capital preservation
+  -Strategy exhibited lower upside capture compared to benchmark buy and hold strategy due to high Bull Market Beta observed during the sample duration
+  -However, strategy offers superior capital preservation as seen by 10/50 MSFT configuration achieving a sharpe ratio of 1.637 as well as a 34.62% return
+  -Demonstrates a strong risk-adjusted performance compared to the market
+
+-Optimal parameter
+  -10/50 Window: ighlighted as most optimal by returning the consistently best results
+  -5/20 Window: too sensitive leading to false signals (whiplaws) which contracts unneccesary transaction costs
+  -20/100 Window: extreme lagging leading to taking the long position too late into trends and selling way past peaks
+
+-Volaitlity dampening and drawdown analysis
+  -Annualsied volatility decreases as the length of window increases 
+  -Strategy acts as a filter to reduce exposure to the market during highly volatile periods (AAPL annualised volatility from 16.32% to 10.68%)
+  -Max drawdowns are less than 20% throughout all results meaning that if maximum loss is made the return needed to recover is reduced compared to the typical benchmark buy and hold strategy
+  -Highlights usefulness of strategy to more risk-averse investors
+
+-Strategy Limitations
+  -Effecfiveness of strategy erodes as volatility of market increases
+  -As seen by 5/20 GOOGL configuration, tight windows can amplify losses by entering and exiting the market at erroneous times during highly flucuating price movements
