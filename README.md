@@ -106,3 +106,15 @@ day window against time
 -Strategy Limitations
   -Effecfiveness of strategy erodes as volatility of market increases
   -As seen by 5/20 GOOGL configuration, tight windows can amplify losses by entering and exiting the market at erroneous times during highly flucuating price movements
+
+  #Conclusion
+
+  My moving average crossover strategy underperformed against the benchmark buy and hold strategy due to its lagging nature in a strong bull market, where it takes the long position after upward trends have begun and exiting after peaks. However, it improves risk-adjusted returns by reducing volatility and max drawdowns.
+
+  Over the results, the 10/50 window configuration appears most optimal with the most consistently high returns and, overall, the best sharpe ratios. In contrast, the 5/20 configuration was extremely sensitive, generating noise-driven trades and the 20/100 configuration suffering from excessive lag; making trades after trends have passed.
+  
+  As seen by results, the strategy fails in highly volatile markets as moving average crossover strategies are trend-following and lagging indicators so the fluctuating stock prices create whipsaws that, therefore, erode returns due to amplifying losses and escalating unnecessary transaction costs.
+
+  Potential improvements I would make to this project are benchmarking drawdowns against the buy and hold strategy to better quantify how my strategy diminishes risk, as well as, including dynamic parameter optimisation to adapt to ever-changing market regimes. Further extensions including incorporating more metrics and regime-filters to improve the robustness of my strategy.
+
+  Ultimately, I think my project has given great insight on the trade-offs between risk and return in systematic trading strategies and the importance of adapting models to different market regimes.
