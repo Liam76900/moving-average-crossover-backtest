@@ -6,7 +6,7 @@ Multi-Asset Backtesting of a Moving Average Crossover Strategy
 
 This project acts as a simulation of a moving average crossover trading strategy against a buy and hold strategy with mutiple different assets. It also simulatneously incorporates different parameter choices (moving average windows) which help to interpret how these conditions affect risk and returns as well as having transaction costs for when a trade is made to increase the precision of my returns.
 
-##How to run
+#How to run
 
 Install the required libraries:
 
@@ -27,7 +27,7 @@ cd moving-average-crossover-backtest
 python main.py
 ```
 
-##Features
+#Features
 
 -Multi-asset backtesting
 -Many risk metrics including Sharpe Ratio, Maximum Drawdown and Annualised Volatility
