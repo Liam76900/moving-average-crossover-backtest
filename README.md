@@ -9,18 +9,25 @@ This project acts as a simulation of a moving average crossover trading strategy
 ##How to run
 
 Install the required libraries:
+
 ```bash
 pip install numpy pandas matplotlib yfinance
+```
 
 1. Clone this repository:
+
 ```bash
 git clone https://github.com/Liam76900/moving-average-crossover-backtest.git
 cd moving-average-crossover-backtest
+```
 
 2. Run the script:
-python main.py
 
-#Features
+```bash
+python main.py
+```
+
+##Features
 
 -Multi-asset backtesting
 -Many risk metrics including Sharpe Ratio, Maximum Drawdown and Annualised Volatility
